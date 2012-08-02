@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org">
+
+  <title>Simulating a two-way deterministic finite automaton</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Programming assignment 1: Simulating a two-way deterministic finite
+    automaton</h1>
+
+    <p><b>Submission deadline: Friday, August 17, 2012 (11:59 p.m.)</b></p>
+  </div>
+
+  <h3>Introduction</h3>
+
+  <div style="text-align: left;">
+    <p>The aim of this programming assignment is to simulate a two-way
+    deterministic finite automaton using Haskell.</p>
+  </div>
+
+  <h3>Assignment (80%)</h3>
+
+  <ul style="text-align: left;">
+    <li>Download the <a href="https://github.com/">GitHub</a> repository
+    <a href=
+    "https://github.com/jpvillaisaza/Automata.git">jpvillaisaza/Automata</a>.
+
+      <ul>
+        <li>The module <code>Automata.Data.TDFA</code> implements two-way
+        deterministic finite automata.</li>
+
+        <li>The module <code>Automata.Data.TDFA.Examples</code> gives an
+        example of the data type <code>TDFA</code>.</li>
+      </ul>
+    </li>
+
+    <li>(70%) Using the module <code>Automata.Data.TDFA</code>, define a
+    function
+      <pre>
+          accepts :: TDFA state symbol -&gt; [symbol] -&gt; Bool
+</pre>that tests whether a two-way deterministic finite automaton accepts or
+rejects an input word.
+
+      <ul>
+        <li>Using the module <code>Automata.Data.TDFA.Examples</code>, for
+        example, <code>accepts m [A, A] = False</code>.</li>
+      </ul>
+    </li>
+
+    <li>(10%) Annotate your source code using Haddock. Documentation should
+    explain your solution for the assignment.</li>
+  </ul>
+
+  <h3>Clean code (10%)</h3>
+
+  <div style="text-align: left;">
+    Before submitting your code, clean it up! Clean code:
+
+    <ul>
+      <li>Does not have long lines (at most 80 columns).</li>
+
+      <li>Has a consistent layout.</li>
+
+      <li>Has type signatures for everything.</li>
+
+      <li>Has good comments.</li>
+
+      <li>Has no junk (unused code, commented code, unnecessary code).</li>
+
+      <li>Has no overly complicated function definitions.</li>
+
+      <li>Does not contain any repetitive code.</li>
+    </ul>
+  </div>
+
+  <h3>Submission (10%)</h3>
+
+  <div style="text-align: left;">
+    <p>Submission is electronic. Send an email to
+    <tt>asicard(at)eafit(dot)edu(dot)co</tt> and
+    <tt>jvillais(at)eafit(dot)edu(dot)co</tt> and attach a compressed file
+    (.zip or .tar.gz) with your solution.</p>
+
+    <p>Your submission has to include the following:</p>
+
+    <ul>
+      <li><tt>stdfa.hs</tt>, a Haskell module file with your solution for the
+      assignment.</li>
+
+      <li>
+        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
+        the following information.
+
+        <ul>
+          <li>The name of your program.</li>
+
+          <li>Your name(s).</li>
+
+          <li>A general description of your program.</li>
+
+          <li>Information on how to use your program.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h3>Notes</h3>
+
+  <ul style="text-align: left;">
+    <li>The programming assignment may either be solved on your own, or
+    jointly with one other student taking the course.</li>
+
+    <li>You are to use the Haskell Platform 2012.2.0.0 or GHC ≥ 7.4.1.</li>
+
+    <li>The following is the list of GHC options that will be used for
+    testing the programming assignment:
+
+      <ul>
+        <li><code>-Wall</code></li>
+
+        <li><code>-fwarn-incomplete-record-updates</code></li>
+
+        <li><code>-fwarn-missing-local-signs</code></li>
+
+        <li><code>-fwarn-monomorphism-restriction</code></li>
+
+        <li><code>-fwarn-tabs</code></li>
+
+        <li><code>-fwarn-unused-do-bind</code></li>
+
+        <li><code>-Werror</code></li>
+      </ul>
+    </li>
+
+    <li>You can add class constraints to the type signature of
+    <code>accepts</code> if you need them.</li>
+  </ul>
+
+  <h3>Bibliography</h3>
+
+  <p style="text-align: left;">John E. Hopcroft and Jeffrey D. Ullman.
+  <em>Formal Languages and Their Relation to Automata</em>. Addison-Wesley,
+  1969. Full text available in the <a href="http://dl.acm.org/">ACM Digital
+  Library</a>.</p>
+</body>
+</html>
